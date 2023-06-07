@@ -4,25 +4,29 @@
       "id": 1,
       "name": "Tênis",
       "price": 300,
-      "category": "Calçados"
+      "category": "Calçados",
+      "photo": "https://imgcentauro-a.akamaihd.net/900x900/97309902A1/tenis-nike-downshifter-12-masculino-img.jpg"
     },
     {
       "id": 2,
       "name": "Camisa",
       "price": 30,
-      "category": "Vestuário"
+      "category": "Vestuário",
+      "photo": "https://alphafacas.com.br/imagens/produtos/camisa-invictus-de-sarja-endurance-caqui-294056.jpg"
     },
     {
       "id": 4,
-      "name": "Calça",
+      "name": "Calça Jeans",
       "price": 150,
-      "category": "Vestuário"
+      "category": "Vestuário",
+      "photo": "https://static.zattini.com.br/produtos/calca-jeans-skinny-feminina-bolsos-disparate-19368/25/G77-0514-325/G77-0514-325_zoom1.jpg?ts=1684839204&"
     },
     {
       "id": 5,
       "name": "Brinco",
       "price": 5,
-      "category": "Acessório"
+      "category": "Acessório",
+      "photo": "https://cdn.dooca.store/73798/products/brinco-ouro-amarelo-18k-coracao_1600x1600+fill_ffffff.jpeg?v=1670965091000"
     }
   ]
 }
