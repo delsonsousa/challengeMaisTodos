@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Tênis",
+      "price": 300,
+      "category": "Calçados"
+    },
+    {
+      "id": 2,
+      "name": "Camisa",
+      "price": 30,
+      "category": "Vestuário"
+    },
+    {
+      "id": 4,
+      "name": "Calça",
+      "price": 150,
+      "category": "Vestuário"
+    },
+    {
+      "id": 5,
+      "name": "Brinco",
+      "price": 5,
+      "category": "Acessório"
+    }
+  ]
+}
