@@ -1,6 +1,12 @@
-import { Plus } from "phosphor-react";
+import { Plus, PencilSimple } from "phosphor-react";
 
-import { Container, Button, Image } from "./styles";
+import {
+  Container,
+  Image,
+  ButtonContainer,
+  EditProductbutton,
+  AddProductButton,
+} from "./styles";
 
 import logo from "../../assets/Logo-MaisTodos.png";
 
@@ -8,9 +14,14 @@ export function Header() {
   return (
     <Container>
       <Image src={logo} />
-      <Button>
-        Adicionar Produto <Plus size={24} />
-      </Button>
+      <ButtonContainer>
+        <EditProductbutton>
+          Editar produto <PencilSimple size={24} />
+        </EditProductbutton>
+        <AddProductButton>
+          Adicionar produto <Plus size={24} />
+        </AddProductButton>
+      </ButtonContainer>
     </Container>
   );
 }

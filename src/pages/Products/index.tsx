@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Header } from "../../components/Header";
 import { api } from "../../lib/axios";
+import { priceFormatter } from "../../utils/formatter";
 import {
   Container,
   ProductsCardContainer,
@@ -40,7 +41,7 @@ export function Products() {
               <img src={product.photo} />
               <ProductsDescription>
                 <Title>{product.name}</Title>
-                <Price>{product.price}</Price>
+                <Price>{priceFormatter.format(product.price)}</Price>
               </ProductsDescription>
             </ProductsCardContent>
           ))}

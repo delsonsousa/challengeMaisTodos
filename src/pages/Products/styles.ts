@@ -21,6 +21,7 @@ export const ProductsCardContent = styled.button`
   width: 350px;
   max-width: 350px;
   margin-bottom: 30px;
+  padding: 0 1.5rem;
 
   border: 0;
   background-color: transparent;
@@ -42,7 +43,7 @@ export const ProductsDescription = styled.div`
   align-items: center;
 
   margin-top: 10px;
-  padding: 0 2rem;
+  /* padding: 0 2rem; */
 `;
 
 export const Title = styled.h3`
