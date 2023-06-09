@@ -1,26 +1,28 @@
-import { Plus, PencilSimple } from "phosphor-react";
+import * as Dialog from "@radix-ui/react-dialog";
 
 import {
   Container,
   Image,
   ButtonContainer,
-  EditProductbutton,
-  AddProductButton,
+  AddOrEditProductbutton,
 } from "./styles";
 
 import logo from "../../assets/Logo-MaisTodos.png";
+import { AddOrEditModal } from "../AddOrEditModal";
 
 export function Header() {
   return (
     <Container>
       <Image src={logo} />
       <ButtonContainer>
-        <EditProductbutton>
-          Editar produto <PencilSimple size={24} />
-        </EditProductbutton>
-        <AddProductButton>
-          Adicionar produto <Plus size={24} />
-        </AddProductButton>
+        <Dialog.Root>
+          <Dialog.Trigger asChild>
+            <AddOrEditProductbutton>
+              Adicionar ou editar produto
+            </AddOrEditProductbutton>
+          </Dialog.Trigger>
+          <AddOrEditModal />
+        </Dialog.Root>
       </ButtonContainer>
     </Container>
   );

@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
-import { Header } from "../../components/Header";
 import { api } from "../../lib/axios";
-import { priceFormatter } from "../../utils/formatter";
 import {
   Container,
   ProductsCardContainer,
@@ -9,21 +7,20 @@ import {
   ProductsDescription,
   Title,
   Price,
+  CartButton,
+  ButtonContainer,
 } from "./styles";
 
+import { Header } from "../../components/Header";
 import { ProductsProps } from "../../@types/products";
+import { priceFormatter } from "../../utils/formatter";
+import { ShoppingCart } from "phosphor-react";
 
 export function Products() {
   const [products, setProducts] = useState<ProductsProps[]>([]);
 
-  async function fetchProducts(query?: string) {
-    const response = await api.get("/products", {
-      params: {
-        _sort: "createdAt",
-        _order: "desc",
-        q: query,
-      },
-    });
+  async function fetchProducts() {
+    const response = await api.get("/products");
 
     setProducts(response.data);
   }
@@ -31,6 +28,7 @@ export function Products() {
   useEffect(() => {
     fetchProducts();
   }, []);
+
   return (
     <div>
       <Header />
@@ -39,6 +37,11 @@ export function Products() {
           {products.map((product) => (
             <ProductsCardContent key={product.id}>
               <img src={product.photo} />
+              <ButtonContainer>
+                <CartButton>
+                  <ShoppingCart size={24} />
+                </CartButton>
+              </ButtonContainer>
               <ProductsDescription>
                 <Title>{product.name}</Title>
                 <Price>{priceFormatter.format(product.price)}</Price>
