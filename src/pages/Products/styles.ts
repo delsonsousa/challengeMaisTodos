@@ -58,8 +58,7 @@ export const CartButton = styled.button`
   background-color: ${({ theme }) => theme["green-500"]};
   color: ${({ theme }) => theme.white};
   font-weight: bold;
-  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1);
-  z-index: 99999;
+  box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.16);
   cursor: pointer;
 
   &:hover {

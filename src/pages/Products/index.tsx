@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { api } from "../../lib/axios";
+import { api } from "../../services/api";
 import {
   Container,
   ProductsCardContainer,
@@ -12,29 +12,19 @@ import {
 } from "./styles";
 
 import { Header } from "../../components/Header";
-import { ProductsProps } from "../../@types/products";
 import { priceFormatter } from "../../utils/formatter";
 import { ShoppingCart } from "phosphor-react";
+import useFetchProducts from "../../queries/product";
 
 export function Products() {
-  const [products, setProducts] = useState<ProductsProps[]>([]);
-
-  async function fetchProducts() {
-    const response = await api.get("/products");
-
-    setProducts(response.data);
-  }
-
-  useEffect(() => {
-    fetchProducts();
-  }, []);
+  const { data } = useFetchProducts();
 
   return (
     <div>
       <Header />
       <Container>
         <ProductsCardContainer>
-          {products.map((product) => (
+          {data?.map((product) => (
             <ProductsCardContent key={product.id}>
               <img src={product.photo} />
               <ButtonContainer>
