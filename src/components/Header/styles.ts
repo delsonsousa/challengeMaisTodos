@@ -20,30 +20,7 @@ export const ButtonContainer = styled.div`
   gap: 20px;
 `;
 
-export const EditProductbutton = styled.button`
-  background: transparent;
-  border: 2px solid ${({ theme }) => theme["green-500"]};
-  border-radius: 50px;
-  color: ${({ theme }) => theme["green-500"]};
-  font-weight: bold;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 200px;
-  height: 50px;
-  gap: 15px;
-
-  cursor: pointer;
-
-  &:hover {
-    transition: opacity 0.2s;
-    opacity: 0.6;
-  }
-`;
-
-export const AddProductButton = styled.button`
+export const AddOrEditProductbutton = styled.button`
   background: ${({ theme }) => theme["green-500"]};
   border: 0;
   border-radius: 50px;
@@ -54,7 +31,7 @@ export const AddProductButton = styled.button`
   align-items: center;
   justify-content: center;
 
-  width: 200px;
+  width: 250px;
   height: 50px;
   gap: 15px;
 
@@ -65,3 +42,26 @@ export const AddProductButton = styled.button`
     opacity: 0.6;
   }
 `;
+
+// export const AddProductButton = styled.button`
+//   background: ${({ theme }) => theme["green-500"]};
+//   border: 0;
+//   border-radius: 50px;
+//   color: ${({ theme }) => theme.white};
+//   font-weight: bold;
+
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   width: 200px;
+//   height: 50px;
+//   gap: 15px;
+
+//   cursor: pointer;
+
+//   &:hover {
+//     transition: opacity 0.2s;
+//     opacity: 0.6;
+//   }
+// `;
