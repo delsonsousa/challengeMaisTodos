@@ -8,20 +8,26 @@ import {
 } from "./styles";
 
 import logo from "../../assets/Logo-MaisTodos.png";
-import { AddOrEditModal } from "../AddOrEditModal";
+import { AddOrEditModalStep1 } from "../AddOrEditModalStep1";
 
-export function Header() {
+type HeaderProps = {
+  hasButton?: boolean;
+};
+
+export function Header({ hasButton = true }: HeaderProps) {
   return (
     <Container>
       <Image src={logo} />
       <ButtonContainer>
         <Dialog.Root>
           <Dialog.Trigger asChild>
-            <AddOrEditProductbutton>
-              Adicionar ou editar produto
-            </AddOrEditProductbutton>
+            {hasButton && (
+              <AddOrEditProductbutton>
+                Adicionar ou editar produto
+              </AddOrEditProductbutton>
+            )}
           </Dialog.Trigger>
-          <AddOrEditModal />
+          <AddOrEditModalStep1 />
         </Dialog.Root>
       </ButtonContainer>
     </Container>

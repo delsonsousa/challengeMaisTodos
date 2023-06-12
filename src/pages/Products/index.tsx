@@ -14,10 +14,11 @@ import {
 import { Header } from "../../components/Header";
 import { priceFormatter } from "../../utils/formatter";
 import { ShoppingCart } from "phosphor-react";
-import useFetchProducts from "../../queries/product";
+import { useGetProducts } from "../../queries/product/";
+import { PocketCart } from "../../components/PocketCart";
 
 export function Products() {
-  const { data } = useFetchProducts();
+  const { data } = useGetProducts();
 
   return (
     <div>
@@ -39,6 +40,7 @@ export function Products() {
             </ProductsCardContent>
           ))}
         </ProductsCardContainer>
+        <PocketCart />
       </Container>
     </div>
   );
